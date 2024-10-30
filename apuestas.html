@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitoBet365 - Casa de Apuestas Deportivas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1b1f27;
+            color: #ffffff;
+        }
+/* Estilos de la sección de promociones */
+.promotions-section {
+            padding: 50px 20px;
+            background-color: #212a34;
+            text-align: center;
+        }
+
+        .promotions-section h2 {
+            color: #f2b632;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .promotion-card {
+            background-color: #282f38;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .promotion-card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .promotion-card h3 {
+            color: #f2b632;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .promotion-card p {
+            font-size: 1em;
+            margin-bottom: 10px;
+            color: #ddd;
+        }
+
+        .promo-btn {
+            background-color: #f2b632;
+            color: #212a34;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .promo-btn:hover {
+            background-color: #d99a30;
+        }
+
+        /* Diseño responsivo para la sección de promociones */
+        @media (min-width: 768px) {
+            .promotions-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .promotion-card {
+                flex: 1 1 30%;
+                max-width: 300px;
+            }
+        }
+    
+        /* Navbar */
+        .navbar {
+            background-color: #212a34;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 1.5em;
+            color: #f2b632;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar li {
+            margin-left: 20px;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            color: #f2b632;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('sports.jpg') no-repeat center center/cover;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            color: #f2b632;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin: 10px 0 20px;
+        }
+
+        .cta {
+            background-color: #f2b632;
+            color: #212a34;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .cta:hover {
+            background-color: #d99a30;
+        }
+
+        /* Live Section */
+        .live-section, .events-section, .stats-section, .login-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .live-section h2, .events-section h2, .stats-section h2, .login-section h2 {
+            color: #f2b632;
+            margin-bottom: 20px;
+        }
+
+        .live-events, .events-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        .event {
+            background-color: #282f38;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .bet-btn {
+            background-color: #f2b632;
+            color: #212a34;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .bet-btn:hover {
+            background-color: #d99a30;
+        }
+
+        /* Login Section */
+        .login-section form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .login-section input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #f2b632;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background-color: #d99a30;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #212a34;
+            color: #f2b632;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+            }
+            
+            .navbar li {
+                margin: 10px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            
+            .cta {
+                font-size: 0.9em;
+            }
+            
+            .live-events, .events-list {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">FitoBet365</div>
+        <nav>
+            <ul>
+                <li><a href="#live">En Vivo</a></li>
+                <li><a href="#Promotions">Promociones</a></li>
+                <li><a href="#events">Eventos</a></li>
+                <li><a href="#stats">Estadísticas</a></li>
+                <li><a href="#login">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Nueva sección de promociones -->
+<section id="promotions" class="promotions-section">
+    <h2>Promociones y Bonos</h2>
+    <div class="promotions-container">
+        <!-- Tarjeta de Promoción 1 -->
+        <div class="promotion-card">
+            <img src="bonodebienvenida.jpg" alt="Bono de Bienvenida">
+            <h3>Bono de Bienvenida</h3>
+            <p>Duplica tu primer depósito hasta $500. ¡Empieza con el pie derecho en FitoBet365!</p>
+            <a href="terminos_bienvenida.html" class="promo-btn">Ver Términos</a>
+        </div>
+
+        <!-- Tarjeta de Promoción 2 -->
+        <div class="promotion-card">
+            <img src="bonodedeposito.jpg" alt="Bono de Depósito">
+            <h3>Bono de Depósito</h3>
+            <p>Recibe un bono del 50% en tus depósitos adicionales hasta $300 cada semana.</p>
+            <a href="terminos_deposito.html" class="promo-btn">Ver Términos</a>
+        </div>
+
+        <!-- Tarjeta de Promoción 3 -->
+        <div class="promotion-card">
+            <img src="Promoevento.jpg" alt="Promoción de Evento Especial">
+            <h3>Promoción de Evento Especial</h3>
+            <p>Obtén una apuesta gratuita en el próximo clásico si apuestas en los partidos en vivo.</p>
+            <a href="terminos_evento.html" class="promo-btn">Ver Términos</a>
+        </div>
+
+        <!-- Agrega más tarjetas de promociones según sea necesario -->
+    </div>
+    <section id="hero" class="hero">
+        <h1>Apuesta en tus deportes favoritos</h1>
+        <p>Las mejores cuotas y eventos en tiempo real, solo en FitoBet365.</p>
+        <button class="cta">¡Comienza a Apostar!</button>
+    </section>
+
+    <section id="live" class="live-section">
+        <h2>Partidos en Vivo</h2>
+        <div class="live-events">
+            <!-- 20 Partidos en vivo, divididos en 4 líneas de 5 partidos cada una -->
+            <div class="event"><h3>Barcelona vs Real Madrid</h3><p>Tiempo: 65' | Marcador: 1-2</p><button class="bet-btn">Apostar</button></div>
+            <div class="event"><h3>Manchester City vs PSG</h3><p>Tiempo: 78' | Marcador: 2-1</p><button class="bet-btn">Apostar</button></div>
+            <div class="event"><h3>Juventus vs Milan</h3><p>Tiempo: 45' | Marcador: 0-0</p><button class="bet-btn">Apostar</button></div>
+            <div class="event"><h3>Bayern vs Dortmund</h3><p>Tiempo: 38' | Marcador: 1-1</p><button class="bet-btn">Apostar</button></div>
+            <div class="event"><h3>Inter vs Lazio</h3><p>Tiempo: 60' | Marcador: 2-3</p><button class="bet-btn">Apostar</button></div>
+            <div class="event"><h3>Liverpool vs Chelsea</h3><p>Tiempo: 55' | Marcador: 1-2</p><button class="bet-btn">Apostar</button></div>
+            <div class="event"><h3>Sevilla vs Valencia</h3><p>Tiempo: 72' | Marcador: 0-1</p><button class="bet-btn">Apostar</button></div>
+            <div class="event"><h3>Roma vs Napoli</h3><p>Tiempo: 30' | Marcador: 1-0</p><button class="bet-btn">Apostar</button></div>
+            <div class="event"><h3>Lyon vs Marseille</h3><p>Tiempo: 66' | Marcador: 2-2</p><button class="bet-btn">Apostar</button></div>
+            <div class="event"><h3>Real Sociedad vs Betis</h3><p>Tiempo: 50' | Marcador: 0-1</p><button class="bet-btn">Apostar</button></div>
+            <!-- Añadir más eventos según se necesite -->
+        </div>
+    </section>
+
+    <section id="events" class="events-section">
+        <h2>Próximos Eventos</h2>
+        <div class="events-list">
+            <!-- 20 Próximos eventos, en 4 líneas de 5 eventos cada uno -->
+            <div class="event"><h3>NBA - Lakers vs Celtics</h3><p>Hora: 20:00</p></div>
+            <div class="event"><h3>La Liga - Barcelona vs Villarreal</h3><p>Hora: 18:30</p></div>
+            <div class="event"><h3>Bundesliga - Bayern vs Schalke</h3><p>Hora: 15:00</p></div>
+            <div class="event"><h3>Serie A - Juventus vs Inter</h3><p>Hora: 18:30</p></div>
+            <div class="event"><h3>Ligue 1 - PSG vs Lyon</h3><p>Hora: 17:00</p></div>
+            <div class="event"><h3>MLS - LA Galaxy vs NYCFC</h3><p>Hora: 19:30</p></div>
+            <div class="event"><h3>Champions - Real Madrid vs Liverpool</h3><p>Hora: 21:00</p></div>
+            <div class="event"><h3>Premier - Arsenal vs Man United</h3><p>Hora: 20:45</p></div>
+            <div class="event"><h3>Europa - Roma vs Sevilla</h3><p>Hora: 22:00</p></div>
+            <div class="event"><h3>Copa del Rey - Valencia vs Betis</h3><p>Hora: 19:00</p></div>
+            <!-- Añadir más eventos según se necesite -->
+        </div>
+        <section id="stats" class="stats-section">
+            <h2>Estadísticas y Resultados</h2>
+            <p>Consulta resultados, estadísticas en tiempo real y datos históricos.</p>
+            <button class="cta">Ver Estadísticas</button>
+        </section>
+    
+        <section id="login" class="login-section">
+            <h2>Inicia Sesión</h2>
+            <form action="#" method="post">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="login-btn">Iniciar Sesión</button>
+            </form>
+        </section>
+    
+        <footer>
+            <p>&copy; 2024 FitoBet365. Todos los derechos reservados.</p>
+        </footer>
+    
+        <script src="script.js"></script>
+        
+    </body>
+    </html>
